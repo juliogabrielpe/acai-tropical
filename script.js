@@ -44,6 +44,11 @@ finalizarPedido.addEventListener("click", () => {
         return;
     }
 
+    if (acompanhamentos.length > 4) {
+    alert("Você pode escolher no máximo 4 acompanhamentos.");
+    return;
+}
+
     let listaAcompanhamentos = [];
 
     acompanhamentos.forEach(item => {
