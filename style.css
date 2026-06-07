@@ -326,3 +326,33 @@ nav ul{
 nav ul.active{
     display:flex;
 }
+
+.diferenciais{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    padding:60px 8%;
+    background:#120018;
+}
+
+.diferencial{
+    background:#181818;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    transition:.3s;
+}
+
+.diferencial:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(179,0,255,.25);
+}
+
+.diferencial span{
+    font-size:2.5rem;
+}
+
+.diferencial h3{
+    margin:15px 0 10px;
+    color:#b300ff;
+}
