@@ -276,7 +276,7 @@ nav ul li a{
 .hero h1{
     max-width:700px;
     margin:0 auto 20px;
-
+}
 .hero p{
     font-size:1rem;
 }
@@ -303,9 +303,6 @@ nav ul{
 .btn-nav{
     display:none;
 }
-
-}
-
 
 .btn-card{
     display:inline-block;
