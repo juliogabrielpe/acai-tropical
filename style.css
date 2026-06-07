@@ -242,6 +242,10 @@ transform:translateY(0);
 }
 
 @media(max-width:768px){
+    .monte-acai{
+        padding:70px 5%;
+    }
+}
 
 nav{
     flex-direction:row;
@@ -270,8 +274,8 @@ nav ul li a{
 }
 
 .hero h1{
-    font-size:2rem;
-}
+    max-width:700px;
+    margin:0 auto 20px;
 
 .hero p{
     font-size:1rem;
@@ -390,6 +394,7 @@ nav ul.active{
 .monte-card{
     background:#181818;
     padding:35px 25px;
+    text-align:center;
     border-radius:25px;
     transition:.3s;
 }
@@ -443,3 +448,25 @@ nav ul.active{
     font-size:1.1rem;
 }
 
+#contadorAcompanhamentos{
+    color:#b300ff;
+    font-weight:600;
+    margin-bottom:10px;
+}
+
+.resumo-pedido{
+    margin:20px 10px;
+    padding:10px;
+    background:linear-gradieent(135deg,#120018,#2a0038);
+    border-radius:30px;
+    text-align:center;
+    border: 1px solid rgba(179,0,255,.3);
+}
+
+#totalPedido{
+    font-size:2.2rem;
+    font-weight:800;
+    color:#b300ff;
+    text-align:center;
+    text-shadow:0 0 15px rgba(208,0,255,.4);
+}

@@ -65,3 +65,49 @@ Acompanhamentos: ${listaAcompanhamentos.length > 0 ? listaAcompanhamentos.join("
 
     window.open(url, "_blank");
 });
+
+const checkboxes = document.querySelectorAll('.pedido input[type="checkbox"]');
+const radiosTamanho = document.querySelectorAll('input[name="tamanho"]');
+const contadorAcompanhamentos = document.querySelector("#contadorAcompanhamentos");
+const totalPedido = document.querySelector("#totalPedido");
+
+const precos = {
+    "300ml": 14.90,
+    "500ml": 19.90,
+    "700ml": 24.90,
+    "Barca Tropical": 39.90
+};
+
+function atualizarPedido(){
+    const selecionados = document.querySelectorAll('.pedido input[type="checkbox"]:checked');
+    const tamanhoSelecionado = document.querySelector('input[name="tamanho"]:checked');
+
+    contadorAcompanhamentos.textContent = `Selecionados: ${selecionados.length}/4`;
+
+    if(tamanhoSelecionado){
+        const total = precos[tamanhoSelecionado.value];
+        totalPedido.textContent = total.toLocaleString("pt-BR", {
+            style:"currency",
+            currency:"BRL"
+        });
+    }else{
+        totalPedido.textContent = "R$ 0,00";
+    }
+}
+
+checkboxes.forEach(checkbox => {
+    checkbox.addEventListener("change", () => {
+        const selecionados = document.querySelectorAll('.pedido input[type="checkbox"]:checked');
+
+        if(selecionados.length > 4){
+            checkbox.checked = false;
+            alert("Você pode escolher no máximo 4 acompanhamentos.");
+        }
+
+        atualizarPedido();
+    });
+});
+
+radiosTamanho.forEach(radio => {
+    radio.addEventListener("change", atualizarPedido);
+});

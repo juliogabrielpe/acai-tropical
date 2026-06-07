@@ -50,11 +50,11 @@ Pedir Agora
 <h1>Açai Premium Entregue Na Sua Casa</h1>
 
 <p>
-Combinações irresistíveis, ingredientes selecionados e entrega rápida para toda a região.
+Monte seu açaí do seu jeito, escolha seus acompanhamentos favoritos e receba tudo fresquinho em poucos minutos.
 </p>
 
 <a href="https://wa.me/5511982282160" class="btn">
-Peça pelo WhatsApp
+Montar Meu Açaí
 </a>
 
 </div>
@@ -98,12 +98,40 @@ Peça pelo WhatsApp
     <div class="pedido-box">
         <h3>Escolha o tamanho</h3>
 
-        <label><input type="radio" name="tamanho" value="300ml"> 300ml 🥣</label>
-        <label><input type="radio" name="tamanho" value="500ml"> 500ml 🥣</label>
-        <label><input type="radio" name="tamanho" value="700ml"> 700ml 🥣</label>
-        <label><input type="radio" name="tamanho" value="Barca Tropical"> Barca Tropical 🥣</label>
+        <div class="tamanhos">
+    <label class="tamanho-card">
+        <input type="radio" name="tamanho" value="300ml">
+        <span>🥣</span>
+        <h4>300ml</h4>
+        <p>R$ 14,90</p>
+    </label>
+
+    <label class="tamanho-card">
+        <input type="radio" name="tamanho" value="500ml">
+        <span>🥣</span>
+        <h4>500ml</h4>
+        <p>R$ 19,90</p>
+    </label>
+
+    <label class="tamanho-card">
+        <input type="radio" name="tamanho" value="700ml">
+        <span>🥣</span>
+        <h4>700ml</h4>
+        <p>R$ 24,90</p>
+    </label>
+
+    <label class="tamanho-card">
+        <input type="radio" name="tamanho" value="Barca Tropical">
+        <span>🍧</span>
+        <h4>Barca Tropical</h4>
+        <p>R$ 39,90</p>
+    </label>
+</div>
 
         <h3>Escolha os acompanhamentos</h3>
+        <p id="contadorAcompanhamentos">
+    Selecionados: 0/4
+</p>
 
         <label><input type="checkbox" value="Morango"> 🍓 Morango</label>
         <label><input type="checkbox" value="Banana">  🍌 Banana</label>
@@ -111,6 +139,11 @@ Peça pelo WhatsApp
         <label><input type="checkbox" value="Leite Ninho"> 🥛 Leite Ninho</label>
         <label><input type="checkbox" value="Paçoca"> 🥜 Paçoca</label>
         <label><input type="checkbox" value="Nutella"> 🍫 Nutella</label>
+
+        <div class="resumo-pedido">
+    <h3>Total</h3>
+    <p id="totalPedido">R$ 0,00</p>
+</div>
 
         <button class="btn" id="finalizarPedido">
             Finalizar Pedido
