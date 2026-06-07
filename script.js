@@ -1,3 +1,10 @@
+const configuracao = {
+    whatsapp: "5511987654321",
+    instagram: "@acaitropical",
+    endereco: "Rua das Palmeiras, 250",
+    nomeLoja: "Açaí Tropical"
+};
+
 const sections = document.querySelectorAll("section");
 
 const observer = new IntersectionObserver(entries => {
